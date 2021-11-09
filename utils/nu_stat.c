@@ -712,7 +712,7 @@ fn_exit:
     /* sort and create hit count histogram array */  
     qsort(hit_counts, it_op.num_groups, sizeof(hsize_t), cmpfunc);
     median_hit_count = hit_counts[(it_op.num_groups+1)/2];
-    histogram(hit_counts, it_op.num_groups, 1000, "hit_count_hist.csv");
+    histogram(hit_counts, it_op.num_groups, 100, "hit_count_hist.csv");
 
     /* obtain file size, including external links */
     char *in_dir = dirname(fname);
